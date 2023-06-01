@@ -1,12 +1,12 @@
 CC = clang
 CFLAGS = -Wall -Wextra
 
-main.o: main.c
-	$(CC) $(CFLGAS) main.c
-
 .PHONY: run
-run: main.o
+run: a.out
 	./a.out
+
+a.out: main.c
+	$(CC) $(CFLGAS) main.c
 
 .PHONY: clean
 clean:
